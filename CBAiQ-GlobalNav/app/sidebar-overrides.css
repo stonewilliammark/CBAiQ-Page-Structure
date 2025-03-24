@@ -1,0 +1,9 @@
+/* Direct style overrides for sidebar components */
+[data-sidebar="sidebar"] {
+  padding-top: 0 !important;
+}
+
+.md\:peer-data-\[variant\=inset\]\:m-2 {
+  margin-top: 0 !important;
+}
+
