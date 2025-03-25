@@ -1,0 +1,49 @@
+/* Direct override for SidebarInset */
+.dark [data-sidebar="inset"] {
+  background-color: #272727 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
+  margin: 0.5rem !important;
+  overflow: hidden !important;
+}
+
+/* Override any conflicting styles */
+.dark .peer-data-\[variant\=inset\]\:min-h-\[calc$$100svh-theme$$spacing\.4$$$$\],
+.dark .md\:peer-data-\[variant\=inset\]\:rounded-xl,
+.dark .md\:peer-data-\[variant\=inset\]\:m-2,
+.dark .peer-data-\[variant\=inset\]\:bg-background {
+  background-color: #272727 !important;
+}
+
+/* Force the content area to be visible */
+.dark [data-sidebar="inset"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Target all children of SidebarInset */
+.dark [data-sidebar="inset"] > * {
+  background-color: #272727 !important;
+}
+
+/* Target specific elements */
+.dark [data-sidebar="inset"] header,
+.dark [data-sidebar="inset"] .flex-1,
+.dark [data-sidebar="inset"] .flex-col {
+  background-color: #272727 !important;
+}
+
+/* Ensure the base background is correct */
+.dark body,
+.dark .flex-1,
+.dark [data-sidebar="sidebar"],
+.dark .global-product-bar {
+  background-color: #121212 !important;
+}
+
+/* Make sure the content area stands out */
+.dark [data-sidebar="inset"] {
+  z-index: 10 !important;
+}
+

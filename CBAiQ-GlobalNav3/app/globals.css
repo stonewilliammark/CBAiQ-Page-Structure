@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --background: 0 0% 100%; /* #ffffff - Base background */
+    --foreground: 240 10% 3.9%; /* #09090b - Primary text */
+
+    --card: 0 0% 100%; /* #ffffff - Card background */
+    --card-foreground: 240 10% 3.9%; /* #09090b - Primary text */
+
+    --popover: 0 0% 100%; /* #ffffff - Layer 0 */
+    --popover-foreground: 240 10% 3.9%; /* #09090b - Primary text */
+
+    --primary: 240 5.9% 10%; /* #19191c - Primary accent */
+    --primary-foreground: 0 0% 98%; /* #fafafa - Text on primary */
+
+    --secondary: 240 4.8% 95.9%; /* #f4f4f5 - Secondary accent */
+    --secondary-foreground: 240 5.9% 10%; /* #19191c - Text on secondary */
+
+    --muted: 240 4.8% 95.9%; /* #f4f4f5 - Muted background */
+    --muted-foreground: 240 3.8% 46.1%; /* #71717a - Muted text */
+
+    --accent: 240 4.8% 95.9%; /* #f4f4f5 - Accent background */
+    --accent-foreground: 240 5.9% 10%; /* #19191c - Text on accent */
+
+    --destructive: 0 84.2% 60.2%; /* #ef4444 - Destructive */
+    --destructive-foreground: 0 0% 98%; /* #fafafa - Text on destructive */
+
+    --border: 240 5.9% 90%; /* #e4e4e7 - Border color */
+    --input: 240 5.9% 90%; /* #e4e4e7 - Input border */
+    --ring: 240 5.9% 10%; /* #19191c - Focus ring */
+
+    --radius: 0.5rem;
+
+    /* Sidebar variables - Light Mode */
+    --sidebar: 0 0% 98%; /* #fafafa - Sidebar background */
+    --sidebar-foreground: 240 5.3% 26.1%; /* #424247 - Sidebar text */
+
+    /* CommBank colors */
+    --commbank-yellow: 49 100% 50%; /* #ffcc01 - CommBank yellow */
+  }
+
+  .dark {
+    /* Dark Mode Colors - SIMPLIFIED */
+    --background: 0 0% 7%; /* #121212 - Base background */
+    --foreground: 0 0% 98%; /* #fafafa - Primary text */
+
+    --card: 0 0% 15%; /* #272727 - Card background */
+    --card-foreground: 0 0% 98%; /* #fafafa - Primary text */
+
+    --popover: 0 0% 7%; /* #121212 - Layer 0 */
+    --popover-foreground: 0 0% 98%; /* #fafafa - Primary text */
+
+    --primary: 0 0% 98%; /* #fafafa - Primary accent */
+    --primary-foreground: 240 5.9% 10%; /* #19191c - Text on primary */
+
+    --secondary: 240 3.7% 15.9%; /* #27272a - Secondary accent */
+    --secondary-foreground: 0 0% 65.5%; /* #A7A7A7 - Text on secondary */
+
+    --muted: 240 3.7% 15.9%; /* #27272a - Muted background */
+    --muted-foreground: 0 0% 65.5%; /* #A7A7A7 - Muted text */
+
+    --accent: 240 3.7% 15.9%; /* #27272a - Accent background */
+    --accent-foreground: 0 0% 98%; /* #fafafa - Text on accent */
+
+    --destructive: 0 62.8% 30.6%; /* #7f1d1d - Destructive */
+    --destructive-foreground: 0 0% 98%; /* #fafafa - Text on destructive */
+
+    --border: 240 3.7% 15.9%; /* #27272a - Border color */
+    --input: 240 3.7% 15.9%; /* #27272a - Input border */
+    --ring: 240 4.9% 83.9%; /* #d4d4d8 - Focus ring */
+
+    /* Sidebar variables - Dark Mode */
+    --sidebar: 0 0% 7%; /* #121212 - Sidebar background */
+    --sidebar-foreground: 0 0% 98%; /* #fafafa - Sidebar text */
+
+    /* CommBank colors - Dark Mode */
+    --commbank-yellow: 49 90% 45%; /* #e6b800 - Slightly darker yellow for dark mode */
+  }
+}
+
+/* Basic styling for sidebar */
+[data-sidebar="sidebar"] {
+  background-color: hsl(var(--sidebar));
+  color: hsl(var(--sidebar-foreground));
+  padding-top: 0;
+  border: none;
+}
+
+/* Basic styling for global product bar */
+.global-product-bar {
+  background-color: hsl(var(--sidebar));
+  color: hsl(var(--sidebar-foreground));
+}
+
+/* Ensure the log off button has the correct colors */
+.log-off-button {
+  background-color: hsl(var(--commbank-yellow));
+}
+
+.log-off-button span,
+.log-off-button svg {
+  color: #1e1e1e;
+}
+

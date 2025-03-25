@@ -1,0 +1,29 @@
+/* Direct fix for arrow button hover issue */
+
+/* Reset all arrow button hover states */
+.dark [data-sidebar="menu-action"] {
+  background-color: transparent !important;
+}
+
+/* Only apply hover to the arrow when directly hovering it */
+.dark [data-sidebar="menu-action"]:hover {
+  background-color: #272727 !important;
+}
+
+/* Only apply hover to the arrow when hovering its parent menu item */
+.dark [data-sidebar="menu-button"]:hover + [data-sidebar="menu-action"] {
+  background-color: #272727 !important;
+}
+
+/* Critical: Prevent arrow from highlighting when hovering submenu */
+.dark [data-sidebar="menu-sub"]:hover ~ [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-sub-item"]:hover ~ [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-sub-button"]:hover ~ [data-sidebar="menu-action"] {
+  background-color: transparent !important;
+}
+
+/* Isolate submenu from parent */
+.dark [data-sidebar="menu-sub"] {
+  isolation: isolate;
+}
+

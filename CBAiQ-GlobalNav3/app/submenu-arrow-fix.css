@@ -1,0 +1,28 @@
+/* Fix for arrow highlighting when hovering submenu items in dark mode */
+
+/* Ensure the arrow doesn't highlight when hovering submenu items */
+.dark [data-sidebar="menu-sub"] ~ [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-sub"]:hover ~ [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-sub-item"]:hover ~ [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-sub-button"]:hover ~ [data-sidebar="menu-action"] {
+  background-color: transparent !important;
+}
+
+/* Ensure the arrow only highlights when directly hovered or when the menu button is hovered */
+.dark [data-sidebar="menu-button"]:hover + [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-action"]:hover {
+  background-color: #272727 !important;
+}
+
+/* Add isolation to prevent hover effects from propagating */
+.dark [data-sidebar="menu-sub"] {
+  isolation: isolate;
+  z-index: 1;
+}
+
+/* Ensure submenu items have their own stacking context */
+.dark [data-sidebar="menu-sub-item"] {
+  position: relative;
+  z-index: 2;
+}
+

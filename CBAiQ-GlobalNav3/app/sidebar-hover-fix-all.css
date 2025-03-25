@@ -1,0 +1,36 @@
+/* Fix for hover states in all sidebar sections */
+
+/* Products section hover fix */
+.dark .nav-products [data-sidebar="menu-button"]:hover,
+.dark .products-menu-button:hover {
+  background-color: #272727 !important;
+}
+
+/* Secondary nav hover fix */
+.dark .nav-secondary [data-sidebar="menu-button"]:hover,
+.dark .secondary-menu-button:hover {
+  background-color: #272727 !important;
+}
+
+/* Ensure all menu buttons have hover states */
+.dark [data-sidebar="sidebar"] [data-sidebar="menu-button"]:hover {
+  background-color: #272727 !important;
+}
+
+/* Force hover styles for specific sections */
+.dark .products-menu-button:hover,
+.dark .secondary-menu-button:hover {
+  background-color: #272727 !important;
+}
+
+/* Ensure menu action buttons also have hover states */
+.dark .products-menu-action:hover,
+.dark .products-menu-action-more:hover {
+  background-color: #272727 !important;
+}
+
+/* Ensure submenu buttons have hover states */
+.dark .products-submenu-button:hover {
+  background-color: #272727 !important;
+}
+

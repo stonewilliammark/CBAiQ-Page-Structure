@@ -1,0 +1,46 @@
+/* Layer system for dark mode */
+
+/* Base layer - #121212 */
+.dark body,
+.dark .bg-layer-0,
+.dark .flex-1,
+.dark [data-sidebar="sidebar"],
+.dark .global-product-bar {
+  background-color: #121212 !important;
+}
+
+/* Content layer - #272727 */
+.dark .bg-layer-1,
+.dark [data-sidebar="inset"] {
+  background-color: #272727 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Card/elevated layer - #3E3E3E */
+.dark .bg-layer-2,
+.dark .bg-muted\/50 {
+  background-color: #3e3e3e !important;
+}
+
+/* Ensure proper contrast between layers */
+.dark .flex-1 > div {
+  background-color: #121212 !important;
+}
+
+/* Critical fix for the main content area */
+.dark [data-sidebar="inset"] {
+  background-color: #272727 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
+  margin: 0.5rem !important;
+}
+
+/* Fix for mobile view */
+@media (max-width: 768px) {
+  .dark [data-sidebar="inset"] {
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+

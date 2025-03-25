@@ -1,0 +1,54 @@
+/* Mobile sidebar specific styles */
+/* Reset all padding to ensure consistency */
+.mobile-menu-button,
+.mobile-submenu-button,
+[data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="menu-button"] {
+  padding-left: 8px !important; /* Match desktop's 8px left padding */
+  padding-right: 8px !important; /* Reduced from 32px to 8px to align with arrows */
+}
+
+/* Add padding to the container */
+[data-sidebar="sidebar"][data-mobile="true"] {
+  padding-left: 8px !important; /* 8px container padding */
+  padding-right: 0 !important; /* No right padding on container */
+  padding-bottom: 8px !important; /* Add 8px bottom padding for balanced spacing */
+}
+
+/* Adjust submenu padding */
+.mobile-menu-sub {
+  padding-left: 16px !important;
+  margin-left: 0 !important;
+}
+
+/* Adjust group label padding */
+[data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="group-label"] {
+  padding-left: 8px !important; /* Match the 8px left padding */
+}
+
+/* Ensure menu containers don't have padding */
+[data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="menu"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Add a small bottom margin to the last nav section */
+[data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="content"] > div:last-child {
+  margin-bottom: 8px !important;
+}
+
+/* Ensure menu action buttons are properly positioned */
+[data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="menu-action"] {
+  right: 8px !important; /* Position the action button correctly */
+}
+
+/* Align mobile sidebar close button with menu arrows */
+[data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="trigger"],
+[data-sidebar="sidebar"][data-mobile="true"] .mobile-sidebar-close {
+  margin-right: 8px !important;
+}
+
+/* Ensure the close button container is properly aligned */
+[data-sidebar="sidebar"][data-mobile="true"] > div:first-child {
+  padding-right: 0 !important;
+}
+

@@ -1,0 +1,14 @@
+/* Simple fix for arrow highlighting in dark mode */
+
+/* Direct fix: When hovering a submenu item, force the parent arrow to have transparent background */
+.dark .submenu-item:hover ~ .menu-action-arrow,
+.dark .submenu-button:hover ~ .menu-action-arrow {
+  background-color: transparent !important;
+}
+
+/* Only highlight the arrow when directly hovering it or the main menu item */
+.dark .main-menu-button:hover + .menu-action-arrow,
+.dark .menu-action-arrow:hover {
+  background-color: #272727 !important;
+}
+

@@ -1,0 +1,23 @@
+/* Fix for card styling in dark mode */
+
+/* Set card background to #3E3E3E in dark mode */
+.dark .card,
+.dark [role="dialog"] .bg-card,
+.dark .bg-card {
+  background-color: #3e3e3e !important;
+  border-color: #717171 !important;
+  box-shadow: none !important;
+}
+
+/* Ensure card content has proper contrast */
+.dark .card-header,
+.dark .card-content,
+.dark .card-footer {
+  background-color: #3e3e3e !important;
+}
+
+/* Fix for card description text */
+.dark .card-description {
+  color: #a7a7a7 !important;
+}
+

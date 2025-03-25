@@ -1,0 +1,49 @@
+/* Specific fix for submenu hover states */
+
+/* Ensure parent menu items and arrows don't highlight when hovering submenu items */
+.dark .submenu-container:hover ~ .main-menu-button,
+.dark .submenu-item:hover ~ .main-menu-button,
+.dark .submenu-container:hover ~ .menu-action-arrow,
+.dark .submenu-item:hover ~ .menu-action-arrow,
+.dark [data-sidebar="menu-sub"]:hover ~ [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-sub-item"]:hover ~ [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-sub-button"]:hover ~ [data-sidebar="menu-action"] {
+  background-color: transparent !important;
+}
+
+/* More specific selector to prevent arrow highlighting when hovering submenu */
+.dark [data-sidebar="menu-sub"] ~ [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-sub"]:hover ~ [data-sidebar="menu-action"] {
+  background-color: transparent !important;
+}
+
+/* Ensure only the specific submenu item being hovered gets highlighted */
+.dark .submenu-button:hover {
+  background-color: #272727 !important;
+}
+
+/* Fix for the Settings submenu specifically */
+.dark [data-sidebar="menu-sub"] {
+  position: relative;
+  z-index: 1;
+}
+
+.dark [data-sidebar="menu-sub-button"]:hover {
+  background-color: #272727 !important;
+}
+
+.dark [data-sidebar="menu-sub-button"]:hover ~ [data-sidebar="menu-button"],
+.dark [data-sidebar="menu-sub-item"]:hover ~ [data-sidebar="menu-button"] {
+  background-color: transparent !important;
+}
+
+/* Critical fix for arrow button */
+.dark
+  [data-sidebar="menu-item"]
+  [data-sidebar="menu-sub"]
+  [data-sidebar="menu-sub-item"]:hover
+  ~ [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-item"] [data-sidebar="menu-sub"]:hover ~ [data-sidebar="menu-action"] {
+  background-color: transparent !important;
+}
+

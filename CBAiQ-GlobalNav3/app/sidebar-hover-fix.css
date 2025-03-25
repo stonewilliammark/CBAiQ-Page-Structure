@@ -1,0 +1,52 @@
+/* Fix for sidebar hover states */
+
+/* Reset all hover states first */
+.dark [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-button"],
+.dark [data-sidebar="menu-sub-button"] {
+  background-color: transparent !important;
+}
+
+/* Only apply hover to the specific menu item being hovered */
+.dark [data-sidebar="menu-button"]:hover {
+  background-color: #272727 !important;
+}
+
+/* Only apply hover to the arrow within the same menu item */
+.dark .menu-item-container:hover > [data-sidebar="menu-action"] {
+  background-color: #272727 !important;
+}
+
+/* Fix for the "more" action button hover state */
+.dark .menu-item-container:hover > .menu-action-more {
+  background-color: #272727 !important;
+}
+
+/* Individual hover for the action buttons */
+.dark [data-sidebar="menu-action"]:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Fix for active state */
+.dark [data-sidebar="menu-button"][data-active="true"] {
+  background-color: #272727 !important;
+}
+
+/* Fix for submenu hover states - IMPORTANT: Only apply to the specific submenu item */
+.dark [data-sidebar="menu-sub-button"]:hover {
+  background-color: #272727 !important;
+}
+
+/* Prevent parent menu item from highlighting when hovering submenu items */
+.dark [data-sidebar="menu-sub"]:hover ~ [data-sidebar="menu-button"],
+.dark [data-sidebar="menu-sub-item"]:hover ~ [data-sidebar="menu-button"],
+.dark [data-sidebar="menu-sub"]:hover ~ [data-sidebar="menu-action"],
+.dark [data-sidebar="menu-sub-item"]:hover ~ [data-sidebar="menu-action"] {
+  background-color: transparent !important;
+}
+
+/* Ensure submenu items don't affect parent menu item */
+.dark [data-sidebar="menu-sub"] {
+  isolation: isolate;
+}
+

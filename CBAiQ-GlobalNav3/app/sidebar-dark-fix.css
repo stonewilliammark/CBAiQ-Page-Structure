@@ -1,0 +1,72 @@
+/* CRITICAL SIDEBAR DARK MODE FIXES */
+
+/* Force all sidebar elements to have transparent or #121212 background in dark mode */
+.dark [data-sidebar="sidebar"],
+.dark [data-sidebar="sidebar"] > div,
+.dark [data-sidebar="content"],
+.dark [data-sidebar="footer"],
+.dark [data-sidebar="group"],
+.dark [data-sidebar="group-content"],
+.dark [data-sidebar="group-label"],
+.dark [data-sidebar="menu"],
+.dark [data-sidebar="menu-item"],
+.dark [data-sidebar="menu-button"],
+.dark [data-sidebar="menu-sub"],
+.dark [data-sidebar="menu-sub-item"],
+.dark [data-sidebar="menu-sub-button"] {
+  background-color: #121212 !important;
+  border-color: #121212 !important;
+}
+
+/* Force all sidebar elements to have transparent background */
+.dark [data-sidebar] div,
+.dark [data-sidebar] ul,
+.dark [data-sidebar] li {
+  background-color: #121212 !important;
+}
+
+/* Target specific sidebar group elements */
+.dark [data-sidebar="sidebar"] [data-sidebar="group"] {
+  background-color: #121212 !important;
+}
+
+/* Target the Platform and Products sections specifically */
+.dark [data-sidebar="sidebar"] [data-sidebar="content"] > div {
+  background-color: #121212 !important;
+}
+
+/* Target any element with p-2 class inside sidebar */
+.dark [data-sidebar="sidebar"] .p-2 {
+  background-color: #121212 !important;
+}
+
+/* Target any flex containers inside sidebar */
+.dark [data-sidebar="sidebar"] .flex {
+  background-color: #121212 !important;
+}
+
+/* Target any min-w-0 elements inside sidebar */
+.dark [data-sidebar="sidebar"] .min-w-0 {
+  background-color: #121212 !important;
+}
+
+/* Target any flex-col elements inside sidebar */
+.dark [data-sidebar="sidebar"] .flex-col {
+  background-color: #121212 !important;
+}
+
+/* Target the relative flex w-full min-w-0 flex-col p-2 class combination */
+.dark [data-sidebar="sidebar"] .relative.flex.w-full.min-w-0.flex-col.p-2 {
+  background-color: #121212 !important;
+}
+
+/* Ensure hover states work properly */
+.dark [data-sidebar="menu-button"]:hover {
+  background-color: #272727 !important;
+}
+
+/* Fix for sidebar menu action hover */
+.dark [data-sidebar="menu-action"]:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+

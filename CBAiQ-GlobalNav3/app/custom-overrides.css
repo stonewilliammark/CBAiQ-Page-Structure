@@ -1,0 +1,294 @@
+/* Remove top padding from sidebar */
+[data-sidebar="sidebar"] {
+  padding-top: 0 !important;
+}
+
+/* Light mode specific colors */
+:root:not(.dark) [data-sidebar="sidebar"] {
+  background-color: #fafafa !important;
+  color: #424247 !important;
+}
+
+:root:not(.dark) .global-product-bar {
+  background-color: #fafafa !important;
+  color: #424247 !important;
+}
+
+/* Dark mode specific colors - UPDATED */
+.dark [data-sidebar="sidebar"] {
+  background-color: #121212 !important;
+  color: #fafafa !important;
+  border: none !important;
+}
+
+.dark .global-product-bar {
+  background-color: #121212 !important;
+  color: #fafafa !important;
+}
+
+/* Fix for sidebar edges in dark mode */
+.dark [data-sidebar="sidebar"] > div {
+  background-color: #121212 !important;
+}
+
+.dark [data-sidebar="sidebar"] [data-sidebar="content"] {
+  background-color: #121212 !important;
+}
+
+.dark [data-sidebar="sidebar"] [data-sidebar="footer"] {
+  background-color: #121212 !important;
+}
+
+/* Fix for sidebar rail in dark mode */
+.dark [data-sidebar="rail"] {
+  background-color: #121212 !important;
+}
+
+.dark [data-sidebar="rail"]::after {
+  background-color: #272727 !important;
+}
+
+/* Sidebar group labels - secondary text color */
+[data-sidebar="group-label"] {
+  color: #71717a !important; /* Light mode secondary text */
+}
+
+.dark [data-sidebar="group-label"] {
+  color: #a7a7a7 !important; /* Dark mode secondary text */
+}
+
+/* Remove top margin from main content area on medium screens */
+@media (min-width: 768px) {
+  .md\:peer-data-\[variant\=inset\]\:m-2 {
+    margin-top: 0 !important;
+  }
+}
+
+/* UPDATED: Fix for inset sidebar in dark mode - Layer system */
+.dark .peer-data-\[variant\=inset\]\:min-h-\[calc$$100svh-theme$$spacing\.4$$$$\] {
+  background-color: #272727 !important;
+}
+
+.dark .md\:peer-data-\[variant\=inset\]\:rounded-xl {
+  background-color: #272727 !important;
+}
+
+/* UPDATED: Base background in dark mode */
+.dark .flex-1 {
+  background-color: #121212 !important;
+}
+
+/* UPDATED: Content area background in dark mode */
+.dark [data-sidebar="inset"] {
+  background-color: #272727 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
+  margin: 0.5rem !important;
+}
+
+/* Align the logo with sidebar content */
+.global-product-bar > div:first-child {
+  padding-left: 0.5rem !important; /* Reduced padding for better alignment */
+}
+
+/* Remove left padding on smaller screens */
+@media (max-width: 768px) {
+  .global-product-bar > div:first-child {
+    padding-left: 0 !important;
+  }
+}
+
+/* Explicit styling for the log off button */
+.log-off-button {
+  background-color: #ffcc01 !important;
+}
+
+.log-off-button span,
+.log-off-button svg {
+  color: #1e1e1e !important;
+}
+
+/* Dark mode CommBank logo colors */
+.dark .text-\[\#ffcc01\] {
+  color: #e6b800 !important; /* Slightly darker yellow for dark mode */
+}
+
+.dark .text-\[\#424247\] {
+  color: #fafafa !important;
+}
+
+/* Dark mode log off button */
+.dark .log-off-button {
+  background-color: #e6b800 !important; /* Adjusted yellow for dark mode */
+}
+
+.dark .log-off-button span,
+.dark .log-off-button svg {
+  color: #19191c !important; /* Dark text on yellow button */
+}
+
+/* Content area background - Layer 1 */
+.dark .flex-1 > div {
+  background-color: #121212 !important;
+}
+
+/* Placeholder content cards - Layer 2 */
+.dark .bg-muted\/50 {
+  background-color: #3e3e3e !important;
+}
+
+/* Fix for sidebar floating elements in dark mode */
+.dark .group-data-\[variant\=floating\]\:rounded-lg,
+.dark .group-data-\[variant\=floating\]\:border,
+.dark .group-data-\[variant\=floating\]\:border-sidebar-border,
+.dark .group-data-\[variant\=floating\]\:shadow {
+  background-color: #121212 !important;
+  border-color: #121212 !important;
+}
+
+/* CARD COMPONENT FIXES FOR DARK MODE */
+.dark .bg-card,
+.dark .bg-background {
+  background-color: #121212 !important;
+}
+
+/* Fix for Card component in dark mode */
+.dark [role="dialog"] .bg-background,
+.dark .card,
+.dark .bg-card {
+  background-color: #121212 !important;
+  border-color: #272727 !important;
+}
+
+/* Fix for button hover states in dark mode */
+.dark .hover\:bg-accent:hover {
+  background-color: #272727 !important;
+}
+
+/* SIDEBAR GROUP CONTAINER FIXES */
+.dark [data-sidebar="group"] {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.dark [data-sidebar="group-content"] {
+  background-color: transparent !important;
+}
+
+.dark [data-sidebar="menu"] {
+  background-color: transparent !important;
+}
+
+/* Fix for sidebar menu hover states */
+.dark [data-sidebar="menu-button"]:hover {
+  background-color: #272727 !important;
+}
+
+/* Improve arrow interaction */
+[data-sidebar="menu-action"] {
+  cursor: pointer !important;
+  transition: background-color 0.2s, transform 0.2s !important;
+}
+
+[data-sidebar="menu-action"]:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.dark [data-sidebar="menu-action"]:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.rotate-90 {
+  transform: rotate(90deg) !important;
+}
+
+/* Mobile sidebar improvements */
+@media (max-width: 768px) {
+  /* Ensure the sidebar sheet has proper z-index */
+  [role="dialog"][data-state="open"] {
+    z-index: 100 !important;
+  }
+
+  /* Make sure the trigger button is visible */
+  [data-sidebar="trigger"] {
+    z-index: 50 !important;
+  }
+
+  /* Ensure the global product bar stays on top */
+  .global-product-bar {
+    z-index: 40 !important;
+  }
+
+  /* Fix for mobile sidebar content */
+  [data-sidebar="sidebar"][data-mobile="true"] {
+    width: 85vw !important;
+    max-width: 300px !important;
+  }
+
+  /* Hide any sidebar rails or resize handles on mobile */
+  [data-sidebar="rail"] {
+    display: none !important;
+  }
+
+  /* Ensure consistent spacing for group labels */
+  [data-sidebar="group-label"] {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Remove padding above the Platform heading */
+  [data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="content"] > div:first-child {
+    padding-top: 0 !important;
+  }
+
+  /* Hide the user section in mobile view */
+  [data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="footer"] {
+    display: none !important;
+  }
+
+  /* Mobile sidebar button padding adjustments */
+
+  /* Reset the previous padding settings */
+  [data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="menu-button"] {
+    padding-left: 8px !important;
+    padding-right: 8px !important; /* Reduced from 32px to 8px */
+  }
+
+  /* Ensure the menu action buttons are properly positioned */
+  [data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="menu-action"] {
+    right: 8px !important;
+  }
+
+  /* Adjust group label padding */
+  [data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="group-label"] {
+    padding-left: 8px !important;
+  }
+
+  /* Adjust submenu padding to maintain proper indentation */
+  [data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="menu-sub"] {
+    padding-left: 16px !important;
+    margin-left: 0 !important;
+  }
+
+  /* Container padding */
+  [data-sidebar="sidebar"][data-mobile="true"] {
+    padding-left: 8px !important;
+    padding-right: 0 !important;
+    padding-bottom: 8px !important; /* Add 8px bottom padding */
+  }
+
+  /* Add a small bottom margin to the last item in the sidebar */
+  [data-sidebar="sidebar"][data-mobile="true"] [data-sidebar="content"] > div:last-child {
+    margin-bottom: 8px !important;
+  }
+
+  /* Fix for mobile sidebar in dark mode */
+  .dark [data-sidebar="sidebar"][data-mobile="true"] {
+    background-color: #121212 !important;
+  }
+
+  .dark [data-sidebar="sidebar"][data-mobile="true"] > div {
+    background-color: #121212 !important;
+  }
+}
+

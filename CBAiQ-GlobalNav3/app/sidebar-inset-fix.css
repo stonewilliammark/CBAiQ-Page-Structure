@@ -1,0 +1,21 @@
+/* Fix for SidebarInset in dark mode */
+.dark [data-sidebar="inset"] {
+  background-color: #272727 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
+  margin: 0.5rem !important;
+}
+
+/* Ensure the content inside SidebarInset has the correct background */
+.dark [data-sidebar="inset"] > * {
+  background-color: #272727 !important;
+}
+
+/* Fix for mobile view */
+@media (max-width: 768px) {
+  .dark [data-sidebar="inset"] {
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+

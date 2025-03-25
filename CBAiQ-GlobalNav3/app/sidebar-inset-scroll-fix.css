@@ -1,0 +1,53 @@
+/* Fix for SidebarInset to ensure proper scrolling and styling */
+
+/* Ensure the SidebarInset component has the correct background color */
+.dark [data-sidebar="inset"] {
+  background-color: #272727 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
+  margin: 0.5rem !important;
+  padding-bottom: 1rem !important; /* Add padding at the bottom */
+}
+
+/* Ensure the content inside is scrollable */
+.dark [data-sidebar="inset"] > div {
+  background-color: #272727 !important;
+}
+
+/* Make sure the flex-1 class doesn't interfere with scrolling */
+.dark [data-sidebar="inset"] .flex-1 {
+  overflow: auto !important;
+  background-color: #272727 !important;
+}
+
+/* Ensure the content area has proper padding at the bottom */
+.dark [data-sidebar="inset"] .flex-col {
+  padding-bottom: 1rem !important;
+  background-color: #272727 !important;
+}
+
+/* Fix for mobile view */
+@media (max-width: 768px) {
+  .dark [data-sidebar="inset"] {
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* Ensure the content area is properly positioned */
+.dark .peer-data-\[variant\=inset\]\:min-h-\[calc$$100svh-theme$$spacing\.4$$$$\],
+.dark .md\:peer-data-\[variant\=inset\]\:rounded-xl,
+.dark .md\:peer-data-\[variant\=inset\]\:m-2,
+.dark .peer-data-\[variant\=inset\]\:bg-background {
+  background-color: #272727 !important;
+}
+
+/* Add extra space at the bottom to ensure shadow is visible */
+.dark [data-sidebar="inset"]::after {
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 100%;
+  background-color: transparent;
+}
+
